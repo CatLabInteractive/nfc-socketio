@@ -10,7 +10,7 @@
   "license": "MIT",
   "dependencies": {
     "dotenv": "^8.1.0",
-    "express": "^4.15.2",
+    "express": "^4.17.3",
     "ndef": "^0.2.0",
     "nfc-pcsc": "^0.7.4",
     "socket.io": "^2.2.0",
