@@ -5,7 +5,7 @@ const { Config } = require('./config');
 const { NFC, CONNECT_MODE_DIRECT, KEY_TYPE_A, TAG_ISO_14443_3, TransmitError } = require('nfc-pcsc');
 const MifareUltralight = require('./cards/MifareUltralight.js');
 
-const nfc = new NFC(); // optionally you can pass logger
+const nfc = new NFC(console); // optionally you can pass logger
 
 let nfcSocket;
 
@@ -31,6 +31,7 @@ io.on('connection', function(socket){
         nfcSocket = socket;
         ack({ success: true });
 
+        nfcSocket.removeAllListeners('nfc:password');
         nfcSocket.on('nfc:password', async (data, ack) => {
 
             ack = ack || function() {};
@@ -93,6 +94,7 @@ io.on('connection', function(socket){
 
         });
 
+        nfcSocket.removeAllListeners('nfc:write');
         nfcSocket.on('nfc:write', async (data, ack) => {
 
             ack = ack || function() {};
