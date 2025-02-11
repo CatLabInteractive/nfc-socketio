@@ -45,7 +45,12 @@ if (process.env.SSL_CERTIFICATE && fs.existsSync(process.env.SSL_PRIVATE_KEY)) {
     });
 }
 
-var io = require('socket.io')(http);
+var io = require('socket.io')(http, {
+	cors: {
+		origin: "*",
+		methods: ["GET", "POST"]
+	  }
+});
 
 exports.http = http;
 exports.io = io;

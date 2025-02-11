@@ -13,7 +13,7 @@
     "express": "^4.15.2",
     "ndef": "^0.2.0",
     "nfc-pcsc": "^0.8.1",
-    "socket.io": "^2.2.0",
+    "socket.io": "^4.8.1",
     "typescript": "^3.6.3"
   }
 }
