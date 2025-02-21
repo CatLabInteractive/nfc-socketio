@@ -34,7 +34,7 @@ Starting the app
 ----------------
 Now simply run `node index.js` to start the service.
 
-The chosen password and seleted http port will appear in the terminal window. Enter the password 'localhost:3000' (or domain name) 
+The chosen password and selected http port will appear in the terminal window. Enter the password and server ('localhost:3000' - or domain name) 
 in your drinks app and check if the NFC label turns green.
 
 SSL
@@ -42,7 +42,7 @@ SSL
 Your browser will block websites loaded over https from accessing unencrypted websites, so 
 in order for your webapp to be able to connect to this service you will need to load the 
 webapp over unencrypted http access, or implement encryption by adding an apache/nginx reverse proxy 
-and purchasing an ssl certificate on top of this service.
+and installing an ssl certificate on top of this service.
 
 LED & Beeper:
 -------------
