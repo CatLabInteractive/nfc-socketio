@@ -30,7 +30,14 @@ nano .env
 
 And add a password at ```NFC_PASSWORD=```
 
-SSH
+Starting the app
+----------------
+Now simply run `node index.js` to start the service.
+
+The chosen password and seleted http port will appear in the terminal window. Enter the password 'localhost:3000' (or domain name) 
+in your drinks app and check if the NFC label turns green.
+
+SSL
 ---
 Your browser will block websites loaded over https from accessing unencrypted websites, so 
 in order for your webapp to be able to connect to this service you will need to load the 
